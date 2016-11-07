@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title></title>
+ <title>Stochastic Learner</title>
  <link href="http://anhtu.github.io/atom.xml" rel="self"/>
  <link href="http://anhtu.github.io/"/>
- <updated>2016-11-06T20:49:33-08:00</updated>
+ <updated>2016-11-07T13:51:14-08:00</updated>
  <id>http://anhtu.github.io</id>
  <author>
    <name>Tu Nguyen</name>
@@ -13,17 +13,20 @@
 
  
  <entry>
-   <title>Lessons learned from the Otto Product Classification Challenge</title>
-   <link href="http://anhtu.github.io/2015/06/01/lessons-learned-from-the-otto-product-classification-challenge/"/>
+   <title>Kaggle is fun - Otto Product Classification Challenge</title>
+   <link href="http://anhtu.github.io/2015/06/01/kaggle-is-fun-otto-product-classification-challenge/"/>
    <updated>2015-06-01T00:00:00-07:00</updated>
-   <id>http://anhtu.github.io/2015/06/01/lessons-learned-from-the-otto-product-classification-challenge</id>
-   <content type="html">&lt;p&gt;Otto Group Product Classification Challenge is the most popular Kaggle competition ever (in terms of participants). The task was to build a predictive model to classify products into one of the nine categories. I was fortunate to take part in this competition and learned a great deal of techniques from other fellow Kagglers.&lt;/p&gt;
+   <id>http://anhtu.github.io/2015/06/01/kaggle-is-fun-otto-product-classification-challenge</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.kaggle.com/c/otto-group-product-classification-challenge&quot;&gt;Otto Group Product Classification Challenge&lt;/a&gt; is the most popular Kaggle competition ever (in terms of participants). The task was to build a predictive model to classify products into one of the nine categories. I was fortunate to take part in this competition and learned a great deal of techniques from other fellow Kagglers.&lt;/p&gt;
 
-&lt;p&gt;One of the challenges in this competition is that the data was obfuscated, which made feature engineering impossible. We were given a total of 93 numerical features, with a huge 200,000 observations in both training and test data. The fun part of this challenge was that it all came down to understanding about the machine learning algorithms and hyper-parameter optimization.&lt;/p&gt;
+&lt;p&gt;One of the challenges in this competition is that the data was obfuscated, which made feature engineering impossible. No insight could be obtained by examining the data manually. Nevertheless, the dataset is huge. We were given a total of 93 numerical features, with 200,000 observations in both training and test data. To take full advantage of this, the trick is &lt;a href=&quot;https://en.wikipedia.org/wiki/Ensemble_learning&quot;&gt;ensembling/blending/stacking&lt;/a&gt; to push machine learning models to the limit. &lt;/p&gt;
 
-&lt;p&gt;The final result was tight. I joined the competition very late, only had 2 weeks to work on it but I’m quite satisfied with the result. I ended up in 91th place (top 3%) with a logloss of 0.41576, which was not bad given a huge number of competitors (3514 teams).&lt;/p&gt;
+&lt;p&gt;This led to another fun thing, everything came down to understanding of machine learning algorithms and hyper-parameter optimization, since ensembling involves using multiple different models and combine their predictions into one. My final model is a linear stacking of neural nets (H20), xgboost, and random forest. xgboost and neural net complement each other very well, they are the driving force in the ensemble. Most of my time was spent on improving each model individually. Capability of &lt;code&gt;Random Forest&lt;/code&gt; was limited in this dataset, I tried various ways to tune parameters but improvement was minor. The only thing that works for RF was &lt;code&gt;Probability Calibration&lt;/code&gt;. &lt;/p&gt;
 
-&lt;p&gt;My final model is a linear stacking&lt;/p&gt;
+&lt;p&gt;The final result was tight. I joined the competition very late, only had 2 weeks to work on it but I’m quite satisfied with the result. I ended up in &lt;a href=&quot;https://www.kaggle.com/c/otto-group-product-classification-challenge/leaderboard/private&quot;&gt;91th place&lt;/a&gt; (top 3%) with a logloss of 0.41576, which was not bad given a huge number of competitors (3514 teams), and most of people in the top 100 compete in team. &lt;/p&gt;
+
+&lt;p&gt;Even it was fun, I’m not looking foward to many challenges like this, since it was tedious in terms of labour. I spent over $40 to rent machines in AWS running models, and working more than 12 hours everyday for 2 weeks. I want datasets that enables creativity on feature engineering, smart use of models and so on. Anyhow, Kaggle is fun!!!&lt;/p&gt;
+
 </content>
  </entry>
  
