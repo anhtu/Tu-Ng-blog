@@ -10,7 +10,7 @@ description:         'A reserved <a href="http://jekyllrb.com" target="_blank">J
 url:                 'http://anhtu.github.io/'
 baseurl:             'http://anhtu.github.io/'
 paginate:            5
-markdown:            redcarpet
+markdown:            kramdown
 
 # About/contact
 author:
