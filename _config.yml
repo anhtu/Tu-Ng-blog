@@ -8,7 +8,7 @@ title:               "Stochastic Learner"
 tagline:             'The Dart Art of Machine Learning'
 description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:                 'http://anhtu.github.io/'
-baseurl:             ''
+baseurl:             'http://anhtu.github.io/'
 paginate:            5
 markdown:            redcarpet
 
