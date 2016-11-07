@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kaggle is fun - Otto Product Classification Challenge
+title: "Kaggle is fun - Otto Product Classification Challenge"
 tags:
 - kaggle
 - machine learning
