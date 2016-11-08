@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Stochastic Learner</title>
- <link href="http://anhtu.github.io/atom.xml" rel="self"/>
- <link href="http://anhtu.github.io/"/>
- <updated>2016-11-07T14:07:30-08:00</updated>
- <id>http://anhtu.github.io</id>
+ <link href="http://anhtu.github.io/http://anhtu.github.io//atom.xml" rel="self"/>
+ <link href="http://anhtu.github.io/http://anhtu.github.io//"/>
+ <updated>2016-11-07T20:49:50-08:00</updated>
+ <id>http://anhtu.github.io/</id>
  <author>
    <name>Tu Nguyen</name>
    <email>anhtu2687@gmail.com</email>
@@ -13,10 +13,24 @@
 
  
  <entry>
+   <title>Variational Autoencoder and Why should we care about it</title>
+   <link href="http://anhtu.github.io//2016/08/01/variational-autoencoder-and-why-we-should-care-about-it/"/>
+   <updated>2016-08-01T00:00:00-07:00</updated>
+   <id>http://anhtu.github.io/http://anhtu.github.io//2016/08/01/variational-autoencoder-and-why-we-should-care-about-it</id>
+   <content type="html">&lt;p&gt;Recently, I develop an interest about &lt;code&gt;Variational Autoencoder&lt;/code&gt; (VAE), after reading the influential paper called &lt;a href=&quot;https://arxiv.org/abs/1312.6114&quot;&gt;Auto-Encoding Variational Bayes by Kingma&lt;/a&gt;. This occurs very naturally to me as I have a strong interest in Probabilistic Graphical Model, which I believe is the way to go for future development of AI. VAE is basically an autoencoder, which in turns is a neural net with the same output as input. You might ask why letting a neural net learning a model from the data with same output as input? Well, this is called &lt;code&gt;Unsupervised Learning&lt;/code&gt; problem, where we only have the covariate or input variable, no response variable \( y \). Usually the input is quite complex like a distribution of pixels in a picture, that’s why we use a powerful approximator as neural net to learn its distribution. &lt;code&gt;Autoencoder&lt;/code&gt; (AE) is a same-input-output neural net with strong regularization, hoping to learn some useful structure in the data. &lt;/p&gt;
+
+&lt;p&gt;VAE remains in the same spirit as AE. However, it has a probabilistic interpretation as a pair of latent variable model (or decoding distribution) and its variational inference mechanism (or encoding distribution). This generative model lets us reproduce the data, and see the interesting underlying data structure. The paper goes much beyond that, it proposes an efficient algorithms to approximately solve the &lt;code&gt;Inference&lt;/code&gt; and &lt;code&gt;Learning&lt;/code&gt; problem through approximating the posterior of latent and optimizing a lower bound of marginal likelihood of data. &lt;/p&gt;
+
+&lt;p&gt;As being said, Variational Autoencoder (VAE) is a common child of &lt;code&gt;Probabilistic Graphical Models&lt;/code&gt; and `Deep Learning. Why people care about generative model? Because it opens a whole new world for (unsupervised) deep learning, as development in generative model has come a long way. Furthermore, it lets us dive into deep learning and understand what happens undernreath the powerful blackbox algirthm. VAE do marvelous things such as learning and producing images of digits or street view (to learn more, check out &lt;a href=&quot;https://arxiv.org/abs/1502.04623&quot;&gt;this paper&lt;/a&gt;).  &lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>Kaggle is fun - Otto Product Classification Challenge</title>
-   <link href="http://anhtu.github.io/2015/06/01/kaggle-is-fun-otto-product-classification-challenge/"/>
+   <link href="http://anhtu.github.io//2015/06/01/kaggle-is-fun-otto-product-classification-challenge/"/>
    <updated>2015-06-01T00:00:00-07:00</updated>
-   <id>http://anhtu.github.io/2015/06/01/kaggle-is-fun-otto-product-classification-challenge</id>
+   <id>http://anhtu.github.io/http://anhtu.github.io//2015/06/01/kaggle-is-fun-otto-product-classification-challenge</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.kaggle.com/c/otto-group-product-classification-challenge&quot;&gt;Otto Group Product Classification Challenge&lt;/a&gt; is the most popular Kaggle competition ever (in terms of participants). The task was to build a predictive model to classify products into one of the nine categories. I was fortunate to take part in this competition and learned a great deal of techniques from other fellow Kagglers.&lt;/p&gt;
 
 &lt;p&gt;One of the challenges in this competition is that the data was obfuscated, which made feature engineering impossible. No insight could be obtained by examining the data manually. Nevertheless, the dataset is huge. We were given a total of 93 numerical features, with 200,000 observations in both training and test data. To take full advantage of this, the trick is &lt;a href=&quot;https://en.wikipedia.org/wiki/Ensemble_learning&quot;&gt;ensembling/blending/stacking&lt;/a&gt; to push machine learning models to the limit. &lt;/p&gt;

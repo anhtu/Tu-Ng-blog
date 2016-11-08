@@ -3,13 +3,16 @@ layout: default
 title: Home
 ---
 
-<ul>
+<table style="width:100%">
+<tbody>
 	{% for post in site.posts %}
-		<li>
-			<span class="post-date">{{ post.date | date_to_string }}</span><a href="{{ post.url }}">{{ post.title }}</a>
-		</li>
+		<tr>
+			<td><span class="post-date">{{ post.date | date_to_string }}</span></td>
+			<td><a href="{{ post.url }}">{{ post.title }}</a></td>
+		</tr>
 	{% endfor %}
-</ul>
+</tbody>
+</table>
 
 
 <div class="pagination">
