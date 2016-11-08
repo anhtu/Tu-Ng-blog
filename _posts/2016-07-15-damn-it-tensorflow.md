@@ -9,11 +9,11 @@ tags:
 comments: true
 ---
 
-Damn it, `Tensorflow`! Why Google spent efforts to develop yet another deep learning library? Another library I have to learn!
+Why Google is spending efforts to develop yet another deep learning library? One more library I have to learn, d*mn it!
 
-That was my thought on first encounter with [Tensorflow](https://www.tensorflow.org/)... It hasn't changed a bit since recently. I got to develop a few machine learning algorithms and what I did was, as usual, coding it by hand from scratch. You might think how laborous it is since we got to deal with the very small detail, but it is fun, and more than that I own it. However, one of the very painful bit in the process was to code up the gradient of the loss function. Long and error-prone. I got stuck for a few hours debugging it. 
+That was my thought on first encounter with [Tensorflow](https://www.tensorflow.org/)... It hasn't changed a bit since recently. I got to develop a few machine learning algorithms and what I did was, as usual, coding it by hand from scratch. You might think how laborous it is since we got to deal with the very small detail... But it is fun! More than that I feel like I actually own it. Yet, one of the very painful bit in the process was to code up the gradient of the loss function. Long and error-prone. I got stuck for a few hours debugging it. 
 
-Then I remember tensorflow actually has a feature to automatically compute your gradient (Aha!), which I already used in my Variational Autoencoder project. I decided to give it a try and it works brillantly. Now, I know why tensorflow is not another deep learning library but so much more than that, it aims to be a numerical computation library. This is a goal for tensorflow and I feel that it's still pretty far from it, although it's making progress. Compared to `numpy`, tensorflow is lacking a lot of array manipulation such as [indexing and slicing](https://github.com/tensorflow/tensorflow/issues/206), people need to resolve to work-arounds. For instance, a very simple code for SVM loss in numpy like the following, would be very painful to translate to tensorflow, note that the code is vectorized and uses a lot of [array indexing](https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)
+Then I remember tensorflow actually has a feature to automatically compute your gradient (Aha!), which I already used in my Variational Autoencoder project. I decided to give it a try and it works brillantly. Now, I know why tensorflow is not another deep learning library but so much more than that, it aims to be a numerical computation library. This is a goal for tensorflow and I feel that it's still pretty far from it, although it's making progress. Compared to `numpy`, tensorflow is lacking a lot of array manipulation such as [indexing and slicing](https://github.com/tensorflow/tensorflow/issues/206), people need to resolve to work-arounds. For instance, a very simple piece of code for SVM loss in numpy like the following, would be very painful to translate to tensorflow. Note that the code is vectorized and uses a lot of [array indexing](https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)
 
 {% highlight python %}
 def svm_loss(X, W, y):
@@ -30,7 +30,7 @@ def svm_loss(X, W, y):
     return loss
 {% endhighlight %}
 
-Simplest solution would be to use [`Autograd`](https://github.com/HIPS/autograd), another tool for `Automatic Differentiation`. Only a smalle change to one line
+Simplest solution would be to use [`Autograd`](https://github.com/HIPS/autograd), another tool for `Automatic Differentiation`. Only a smalle change to one line is requied
 
 {% highlight python %}
 # scores[range(num_train), y] = 0.0
