@@ -4,6 +4,7 @@ title: "Variational Autoencoder and Why should we care about it"
 tags:
 - deep learning
 - graphical models
+- approximate inference
 - machine learning
 comments: true
 ---
@@ -12,6 +13,6 @@ Recently, I develop an interest about `Variational Autoencoder` (VAE), after rea
 
 VAE remains in the same spirit as AE. However, it has a probabilistic interpretation as a pair of latent variable model (or decoding distribution) and its variational inference mechanism (or encoding distribution). This generative model lets us reproduce the data, and see the interesting underlying data structure. The paper goes much beyond that, it proposes an efficient algorithms to approximately solve the `Inference` and `Learning` problem through approximating the posterior of latent and optimizing a lower bound of marginal likelihood of data. 
 
-As being said, Variational Autoencoder (VAE) is a common child of `Probabilistic Graphical Models` and `Deep Learning. Why people care about generative model? Because it opens a whole new world for (unsupervised) deep learning, as development in generative model has come a long way. Furthermore, it lets us dive into deep learning and understand what happens undernreath the powerful blackbox algirthm. VAE do marvelous things such as learning and producing images of digits or street view (to learn more, check out [this paper](https://arxiv.org/abs/1502.04623)).  
+As being said, Variational Autoencoder (VAE) is a common child of `Probabilistic Graphical Models` and `Deep Learning. Why people care about generative model? Because it opens a whole new world for (unsupervised) deep learning, as development in generative model has come a long way. Furthermore, it lets us dive into deep learning and understand what happens underneath the powerful blackbox algirthm. VAE do marvelous things such as learning and producing images of digits or street view (to learn more, check out [this paper](https://arxiv.org/abs/1502.04623)).  
 
 
