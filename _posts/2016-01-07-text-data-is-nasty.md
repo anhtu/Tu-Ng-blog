@@ -20,5 +20,5 @@ This is much better clue to what the entity is. You can even use it to deal with
 
 Since Bing Search API is free up to 5000 transactions a month, make sure you build a simple lookup table if you don't want to pay. And also you don't want to query every entity that you found. So that's another domain problem that you have to deal with. In my case, I know before hand that 80% of my entities are in certain categories and half of them are banks and stores. 
 
-Good luck with text data! 
+I hope this post is useful for whoever reads it. Good luck with text data! 
 
