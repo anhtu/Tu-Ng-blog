@@ -3,7 +3,7 @@ layout: post
 title: "Text data is nasty"
 tags:
 - nlp
-- text summarization
+- svm
 - machine learning
 comments: true
 ---
